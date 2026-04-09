@@ -39,4 +39,11 @@ input {
   border-radius: 1rem;
   background: #fff;
   box-shadow: 2.5px 2.5px 5px gray;
+  display: flex;
+  justify-content: space-between;
+}
+.remover {
+  font-weight: bold;
+  border-radius: 50%;
+  align-self: center;
 }
