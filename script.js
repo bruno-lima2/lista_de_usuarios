@@ -65,8 +65,7 @@ adicionar.addEventListener("click", () => {
   }
 });
 function carregarDados() {
-  const usuarios = JSON.parse(localStorage.getItem("usuario"));
-  if (usuarios) {
+  if (localStorage.getItem("usuario")) {
     const campo = document.createElement("div");
     campo.classList.add("campo");
     campos.appendChild(campo);
@@ -74,9 +73,9 @@ function carregarDados() {
     container.classList.add("container");
     campo.appendChild(container);
     botaoRemover(campo);
-    adicionarValores(container, "Nome: ", usuarios.nome);
-    adicionarValores(container, "Email: ", usuarios.email);
-    adicionarValores(container, "Celular: ", usuarios.celular);
+    adicionarValores(container, "Nome: ", JSON.parse(localStorage.getItem("usuario")).nome);
+    adicionarValores(container, "Email: ", JSON.parse(localStorage.getItem("usuario")).email);
+    adicionarValores(container, "Celular: ", JSON.parse(localStorage.getItem("usuario")).celular);
   }
 }
 carregarDados();
